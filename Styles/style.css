@@ -408,8 +408,8 @@ main {
     /* color: var(--light-white) */
 }
 #latest-items #songs-div i:hover{
-    color: springgreen;
-    text-shadow: black 2px 5px ;
+    color: rgb(253, 253, 253);
+    text-shadow: black 2px 2px ;
     transform:scale(2);
 }
 
@@ -435,17 +435,19 @@ main {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 0px;
-    margin-top: 20px;
-    background-color: var(--light-blue);
+    margin-top: 15px;
+    background-color: rgb(221, 221, 221);
 }
 
 
 /* list box size */
 .anim-box-div{
-    margin-left: 0px;
+    position: absolute;
+    right: 0;
     height: 0;
     width: 0;
     overflow: hidden;
+    margin-right: 25px;
 }
 
 /* visiblity on target */
@@ -455,26 +457,47 @@ main {
     overflow: visible;
 }
 
+.anim-box-div a{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(26, 25, 25);
+    text-decoration: none; 
+}
+
 /* redirecting on 3dots */
 #dots-time a{
     text-decoration: none;
     color: white;
+    
 }
 
 
 /* unorder list */
 #latest-div ul {
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    justify-content: space-evenly;
+    border: 0.1px solid rgba(139, 139, 139,0.1);
+    padding: 3px;
+}
 
-    border: 0.1px solid rgba(139, 139, 139,0.1);
+#latest-div ul i{
+    float:left;
+    font-size: 10px;
 }
+
+#latest-div ul button{
+    width: 100%;
+    padding: 0px;
+}
+
 #latest-div ul li {
-    border: 0.1px solid rgba(139, 139, 139,0.1);
+    border: 0.1px solid rgba(255, 255, 255, 0.1);
     font-size: 12px;
-    font-family: cursive;
-}
-#latest-div ul li:hover {
-    color: black;
-    background-color: rgb(180, 70, 70);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(26, 25, 25);
+    float: right;
 }
 
 
@@ -1285,7 +1308,7 @@ google-voice{
     }
 
     songs{
-        margin: 20px;
+        margin: 10px;
     }
 }
 
@@ -1389,7 +1412,19 @@ google-voice{
         font-size: 0.8rem;
         padding: 5px 10px;
     }
-    
+
+    /* text decoration */
+    .music-types .container .type-of-music{
+        left: 10%;
+        font-size: 1rem;
+        
+    }
+    songs h5{
+        font-size: 0.7rem;
+    }
+    songs h5{
+        font-size: 0.6rem;
+    }
 }
 
 
@@ -1428,6 +1463,12 @@ google-voice{
         display: none;
     }
 
+    #latest-items #songs-div{
+        padding: 4px;
+        height: 50px;
+        width: 50px;
+    }
+
 
     /* hiding footer */
     footer{
@@ -1442,6 +1483,7 @@ google-voice{
         
     }
     
+    
 
     
     /* bottom navigation size  */
@@ -1454,16 +1496,46 @@ google-voice{
     }
 
     /* app download banner */
-    /* #app-download h4{
-        display: none;
+    app a{
+        margin-top: 30px;
     }
-     */
+    
     
 
     /* menu bar shifting to left */
     menu{
         left: 5vh;
     }
+
+    songs #name h4{
+        font-size: 10px;
+    }
+    songs #name h5{
+        font-size: 8px;
+    }
+
+    songs #dots-time p{
+        font-size: 8px;
+    }
+    songs #dots-time a{
+        font-size: 8px;
+    }
+
+    #anim-div{
+        display: flex;
+        height: 40vw;
+        
+    }
+
+    /* span of animation styling */
+    .box span{
+        transform: rotateY(calc(var(--i) * 72deg)) translateZ(150px) ;
+    }
+
+    #slider{
+        display: none;
+    }
+    
 }
 
 
@@ -1490,19 +1562,6 @@ google-voice{
     /* hiding audio controls */
     #audio-controls>i{
         display: none;
-    }
-
-    #latest-items #dots-time{
-        display: none;
-    }
-
-
-    /* items names */
-    #latest-items #name{
-        display: none;
-    }
-    #latest-items songs{
-        width: 150px;
     }
 
     /* app banner hiding */
