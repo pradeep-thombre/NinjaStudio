@@ -1,0 +1,408 @@
+
+/* <!-- Including one css file into other --> */
+@import "style.css";
+
+
+
+
+
+
+
+/* -----------------------------------------------main---------------------------------------- */
+main{
+    padding: 5vh 2vw 5vh 10vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------main board---------------------------------------- */
+
+
+/* board div */
+
+board{
+    height: 34vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+    /* border:0.5px var(--light-white) outset ; */
+    border-radius: 20px;
+    background-color: var(--light-blue);
+    box-sizing: content-box;
+    margin-bottom: 20px;
+}
+
+
+
+board::-webkit-scrollbar {
+    display: none;
+}
+
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  board {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+/* main image div */
+imgdiv{
+    width: 40%;
+    height: 34vh;
+    
+}
+
+
+/* image styles */
+imgdiv img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+/* contnt div */
+contentdiv{
+    width: 55%;
+    padding:20px ;
+    overflow: hidden;
+}
+
+
+contentdiv p{
+    margin: 10px 0px;
+    color: rgb(193, 197, 231);
+    font-size: 13px;
+    font-family: -webkit-pictograph;
+}
+
+
+contentdiv h2{
+    margin: 5px;
+    color: white;
+    font-family: -webkit-pictograph;
+}
+contentdiv b{
+    margin: 10px 5px;
+    color: white;
+    font-family: -webkit-pictograph;
+    font-size: small;
+}
+
+
+contentdiv button{
+    background-image: linear-gradient(to bottom right, rgb(58,37,177), rgb(214, 120, 238));
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------Albums---------------------------------------- */
+
+album{
+    height: 42vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+}
+
+album songs{
+    padding: 10px;
+    min-width: 200px;
+    width: 100%;
+    
+}
+
+album p{
+    color: var(--light-white,white);
+    display: inline-block;
+    
+}
+
+
+album img{
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px rgba(67, 76, 105, 0.3);
+    margin-left: 10px;
+}
+
+album songs name{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+album songs:hover{
+    border: 0.7px solid rgba(160, 158, 158, 0.5);
+    border-radius: 10px;
+    background-color: var(--light-blue);
+}
+
+album songs name h4{
+    margin: 0px;
+    color: white;
+    font-family: -webkit-pictograph;
+    letter-spacing: 0.8px;
+}
+
+album songs h6{
+    margin: 0px;
+    color: var(--light-white);
+    font-family: -webkit-pictograph;
+    letter-spacing: 0.8px;
+}
+
+album songs i{
+    float: right;
+    color: rgb(207, 207, 207);
+    vertical-align: baseline;
+    margin-top: 10px;
+    font-size: 1rem;
+    padding-right: 2vw;
+}
+
+album songs i:hover{
+    color: rgb(250, 51, 16);
+}
+
+album::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+album {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------Aside playlist---------------------------------------- */
+
+
+aside{
+    height: 72vh;
+}
+
+
+
+/* container div */
+fav{
+    height: 30vh;
+}
+
+
+fav songs name h5{
+    margin: 0px;
+    color: white;
+    font-family: -webkit-pictograph;
+    letter-spacing: 0.8px;
+}
+
+
+artist{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+}
+
+aside h3{
+    color: white;
+    font-family: -webkit-pictograph;
+    display: inline-block;
+    margin: 0px;
+
+}
+
+
+
+
+/* Titles for playlist */
+#queue-title p{
+    float: right;
+    background-color: var(--main-color,rgb(12,16,39));
+    font-size: 0.7rem;
+    color: var(--light-white,white);
+    margin-top: 1vh;
+    font-family: system-ui;
+    border-style: hidden;
+}
+
+
+/* images */
+fav img{
+    height: 30px;
+    width: 30px;
+}
+
+artist songs{
+    padding: 10px;
+    min-width: 200px;
+    width: 300px;
+    
+}
+
+artist p{
+    color: var(--light-white,white);
+    display: inline-block;
+    
+}
+
+/* artist imags */
+
+artist img{
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px rgba(67, 76, 105, 0.3);
+    margin-left: 10px;
+}
+
+
+/* song names */
+artist songs name{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* song names hover*/
+artist songs:hover{
+    border: 0.7px solid rgba(160, 158, 158, 0.5);
+    border-radius: 10px;
+    background-color:cadetblue
+}
+
+artist songs name h4{
+    margin: 0px;
+    color: white;
+    font-family: -webkit-pictograph;
+    letter-spacing: 0.8px;
+}
+artist songs h6{
+    margin: 0px;
+    color: var(--light-white);
+    font-family: -webkit-pictograph;
+    letter-spacing: 0.8px;
+}
+
+artist songs i{
+    float: right;
+    color: rgb(255, 255, 255);
+    vertical-align: baseline;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+artist songs i:hover{
+    color: rgb(117, 94, 199);
+}
+
+
+
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+artist::-webkit-scrollbar {
+    display: none;
+}
+  
+
+artist {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------Bottom navigation---------------------------------------- */
+
+bottom-nav{
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+
+#bottom-nav:target{
+    display: block;
+    position: absolute;
+    top: 85vh;
+    left: 15vw;
+    height: 12vh;
+    width: 70vw;
+    background-color: var(--light-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    position: fixed;
+    border:1px white solid;
+}

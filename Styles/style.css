@@ -1,0 +1,1541 @@
+*
+{
+    box-sizing: border-box;
+}
+:root{
+    --main-color:rgb(12,16,39);
+    --light-white:rgb(197, 198, 201);
+    --light-blue:rgb(18,25,62);
+    box-sizing: content-box;
+}
+
+
+
+
+
+/* main Body Styles */
+body{
+    background-color:var(--main-color,rgb(12,16,39));
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------    Navigation div    -----------------------------------------------------  */
+nav{
+    padding: 1% 5%;
+    margin: 0%;
+    width: 100%;
+    align-self: center;
+    position: fixed;
+    background-color: var(--main-color);
+    z-index: 1;
+}
+
+
+/* all divs under nav */
+nav div{
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+
+/* main logo of Ninja Studio */
+#main-logo {
+    height: 8vh;
+}
+
+#main-logo img {
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+/* Favourites Heading */
+nav h4{
+    color: white;
+    font-family:Verdana ;
+    align-items: center;
+    font-weight: lighter;
+    margin: 0px 0px 0px 5vw ;
+}
+nav .fav-sym{
+    display: none;
+    font-size: 1.2rem;
+    margin: 0px 0px 0px 5vw ;
+}
+
+/* search bar container div */
+.topnav .search-container {
+    align-items: center;
+    border: black solid 1px;
+    border-radius: 50vh;
+    background-color: rgb(18,25,62);
+    padding: 0px 1vw;
+} 
+
+/* search and mike icons of searchbar */
+nav i{
+    color: var(--light-white,white)
+    
+}
+
+
+
+
+/* -----------------------------------Search Bar -----------------------------*/
+.topnav input{
+    background-color: var(--light-blue);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    width: 20vw;
+    border-style: hidden;
+}
+
+/* search bar input text styling */
+.topnav input {
+    padding: 6px;
+    margin: 4px;
+    font-size: 17px;
+    border: none
+}
+
+#notification{
+    font-size: 1.5rem;
+}
+
+/* notofication icon */
+#notification{
+    height: 30px;
+    width: 30px;
+    padding: 2vh 5vh;
+}
+
+/* my Profile pic div */
+#my-image{
+    
+    height: 8vh;
+    margin-top: 0px;
+}
+
+
+/* Profile styles */
+#my-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;   
+}
+
+
+.right-shift{
+    float:right;
+    margin-top:10px ;
+}
+
+
+
+
+/* ---------------------menu bar----------------------- */
+
+menu{
+    top: 8vh;
+    position: absolute;
+    z-index: 5;
+    left: 10vh;
+    padding-left: 0px;
+    background-color: var(--light-blue);
+    border: 2px white solid;
+    border-radius: 7px;
+    visibility: hidden;
+}
+
+
+/* menu list */
+menu ul{
+    list-style: none;
+    padding: 0px;
+}
+
+/* list items */
+menu ul li{
+    color: white;
+    padding: 5px 20px ;
+}
+
+
+/* hovering on items */
+menu ul li:hover{
+    border-radius: 7px;
+    border: 1px solid white;
+    background-color: rgb(104, 51, 153);
+}
+
+
+/* main logo hovering */
+#main-logo:hover + menu {
+    visibility: visible;
+}
+
+menu:target {
+    visibility: visible;
+}
+
+
+
+
+
+/* ----------------------------------------------------   main section      -----------------------------------------------------  */
+
+main{
+    color: #000;
+    width: 75vw;
+    height: 88vh;
+    display: inline-block;
+    padding: 0px 10vh;
+    margin-top: 10vh;
+    overflow: auto;
+    
+}
+
+
+main::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+main {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------   main animation    --------------------------------------------------*/
+#anim-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vw;
+    
+}
+
+/* animation box */
+.box{
+    position: relative;
+    height: 11vw;
+    width: 18vw;
+    min-height: 100px;
+    min-width: 150px;
+    transform-style:preserve-3d ;
+    animation: animate 30s linear infinite;
+    transform:rotateY(90deg);
+}
+
+
+/* animation stages */
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+/* span of animation styling */
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(25vw) ;
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,rgba(184, 184, 194,0.08));
+}
+
+
+.box span img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center
+} 
+
+.box span img:hover{
+    transform: scale(1.2);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------- Secondary Animation----------------------------------------------------- */
+
+/* main slider outer box */
+#slider {
+	overflow: hidden;
+    display: none;
+}
+
+
+/* slider anumation  */
+@keyframes slider {
+	0% { left: 0; }
+	100% { left: -195vh; }
+}
+#slider figure {
+	width:300vh;
+	position: relative;
+	animation: 7s slider infinite alternate;
+}
+
+
+/* hovering style */
+#slider figure:hover {
+	animation-play-state: paused;
+     /* pause on hover */
+}
+
+
+
+/* slider image */
+#slider figure img {
+	width: 18%;
+	height : 30vh;
+	float: left;
+    margin: 2vh;
+    padding: 4px;
+    border: violet solid 2px;
+}
+
+/* scaling on hover */
+#slider figure img:hover {
+    transform: scale(1.3);
+}
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------    latest release         ----------------------------------------------------------*/
+
+.main-divs{
+    margin: 40px 5vw;
+    
+}
+
+/* latest release div */
+.main-divs h3{
+    color: var(--light-white);
+    
+}
+
+
+/* items in list */
+#latest-items{
+    color: var(--light-white);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#latest-items songs{
+    width: 400px;
+    position: relative;
+}
+
+/* latest Songs container */
+#latest-items #songs-div{
+    padding: 8px;
+    height: 100px;
+    width: 100px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* icons in latest */
+#latest-items #songs-div i{
+    font-size: 1.5rem;
+    color: transparent;
+    /* color: var(--light-white) */
+}
+#latest-items #songs-div i:hover{
+    color: springgreen;
+    text-shadow: black 2px 5px ;
+    transform:scale(2);
+}
+
+/* div property */
+#latest-items songs>div{
+    display: inline-block; 
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+#album-options{
+    margin: 0px;
+}
+
+
+/* list on clicling 3 dots */
+#latest-div ul {
+    margin: 0px;
+    text-align: center;
+    list-style: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    margin-top: 20px;
+    background-color: var(--light-blue);
+}
+
+
+/* list box size */
+.anim-box-div{
+    margin-left: 0px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+/* visiblity on target */
+.anim-box-div:target{
+    height: auto;
+    width: auto;
+    overflow: visible;
+}
+
+/* redirecting on 3dots */
+#dots-time a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* unorder list */
+#latest-div ul {
+
+    border: 0.1px solid rgba(139, 139, 139,0.1);
+}
+#latest-div ul li {
+    border: 0.1px solid rgba(139, 139, 139,0.1);
+    font-size: 12px;
+    font-family: cursive;
+}
+#latest-div ul li:hover {
+    color: black;
+    background-color: rgb(180, 70, 70);
+}
+
+
+
+/* ---------------------------------------------------     popular artists      -------------------------------------------------*/
+
+/* outer boc for popular artist */
+#popular-items{
+    color: var(--light-white);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+
+/* redirecting on recents.html page */
+#popular-items a{
+    height: 12vw;
+    width: 10vw;
+    min-height: 100px;
+    min-width: 100px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    margin: 20px 0px;
+    
+}
+
+#popular-items::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+#popular-items{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#popular-items a div{
+    height: 80%;
+    width: 100%;
+}
+
+
+/* play icons */
+#popular-items a i{
+    color: transparent;
+	position: absolute;
+	top: 30%;
+	left: 42%;
+	font-size: 2.5rem;
+}
+
+/* hovering on icon */
+
+#popular-items a i:hover{
+    color: rgb(255, 255, 255);
+}
+
+#popular-items a img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#popular-items a p{
+    text-align: center;
+}
+
+.no-margin{
+    margin:0px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------- Music-typs    ------------------------------------- */
+
+#party-div{
+    width: 90%;
+    height: 27%;
+    
+}
+
+
+/* types container */
+
+.music-types{
+	width: 95%;
+	margin-top: 2%;
+	height: 100%;
+	display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+    
+}
+
+
+/* items  */
+.music-types .container{
+	width: 33%;
+    min-height: 50px;
+    min-width: 100px;
+    margin: 5px;
+	position: relative;
+	overflow: hidden;
+    background-color: white;
+    
+}
+
+/* images in items */
+.music-types .container img{
+	height: 100%;
+	width: 100%;
+	transition: all 0.5s ease-in-out;
+    opacity: 0.8;
+}
+
+.music-types .container img:hover{
+		transform: scale(1.5);
+	
+}
+
+/* text decoration */
+.music-types .container .type-of-music{
+	color: white;
+	position: absolute;
+	top: 38%;
+	left: 26%;
+	font-size: 1.2rem;
+	font-weight: bold;
+	background-color: transparent;
+	font-family: 'Bebas Neue', cursive;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------emotions--------------------------------------------- */
+
+
+
+/* station image created using 3 divs */
+
+
+/* staion div */
+station{
+    position: relative;
+    height: 100px;
+    width: 130px;
+    margin:5px;
+}
+
+
+/* div1 */
+station div1{
+    position: absolute;
+    background-color: rgb(249,214,76);
+    height: 60px;
+    width: 140px;
+    top: 20px;
+}
+
+/* div2 */
+station div2{
+    position: absolute;
+    background-color: rgb(240,188,16);
+    height: 80px;
+    width: 120px;
+    top: 10px;
+    left: 10px;
+}
+
+
+/* div3 */
+station div3{
+    position: absolute;
+    background-color: rgb(255,79,10);
+    height: 100px;
+    width: 100px;
+    left: 20px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+station div3 img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* emotion container */
+
+#emotions{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow: scroll;
+    flex-wrap: wrap;
+}
+
+#emotions::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* items */
+
+.emotion-item{
+    height: 90px;
+    width: 90px;
+    margin-left: 10px;
+    border-radius: 50%;
+    justify-content: center;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+
+.light-blue{
+    background-color: var(--light-blue);
+    margin-top:40px ;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------          Languages divs           ----------------------------------------------*/
+
+/* container box */
+#latest-lan{ 
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+/* lang images */
+#latest-lan img{
+    height: 120px;
+    width: 110px;
+    border-radius: 2px;
+}
+
+#latest-lan h5{
+    font-family: -webkit-pictograph;
+    color: var(--light-white);
+}
+
+#latest-lan h6{
+    font-family: -webkit-pictograph;
+    color: rgb(167, 164, 164);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------More Languages Div-------------------------------------------------------- */
+
+#more-languages{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+
+
+/* lang .container */
+
+#more-languages lang{
+    min-height: 120px;
+    height: 10vw;
+    min-width: 120px;
+    width: 30%;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bolder;
+    position: relative;
+    margin: 10px;
+    border: 3px solid rgb(189, 85, 16);
+}
+
+/* lang umage */
+#more-languages lang img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* lang names */
+#more-languages lang name{
+    color: white;
+	position: absolute;
+	top: 40%;
+	left: 35%;
+	font-size: 1.2rem;
+	font-weight: bold;
+	background-color: transparent;
+	font-family: 'Bebas Neue', cursive;
+}
+#more-languages lang:hover{
+    transform:scale(1.3) ;
+    z-index: 2;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------- App Adevertisement banner ------------------------------------------ */
+
+
+
+app{
+    justify-content: start;
+    width: 90%;
+    height: 150px;
+    min-width: 250px;
+    background-image: linear-gradient(to bottom right, rgb(245, 77, 35), rgb(214, 120, 238));
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* play store logos */
+app img{
+    height: 100%;
+    width: 18%;
+    
+}
+app i{
+    margin-top: 20%;
+    font-size: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------     Footer Navigation Buttons (Home Carrer)     ------------------------------------- */
+
+footer{
+    border-top: 0.2px solid rgb(141, 141, 141);
+    border-bottom: 0.2px solid white;
+    padding: 20px;
+}
+
+/* footer list of home carrers contact */
+footer ul {
+    margin: 0px;
+    text-align: center;
+    list-style: none;
+    
+}
+
+/* header list items */
+footer ul li{
+    display: inline-block;
+    font-weight: 100;
+    font-size: 1rem;
+    color: white;
+    padding: 5px 30px;
+    size: 30px;
+    font-weight: bolder;
+    border-left: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------        contacts       ---------------------------------------------------------*/
+
+contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+contacts div{
+    width: 100%;
+}
+/* contact images of fb insta */
+contacts img {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+contacts p{
+    color: rgb(158, 152, 152);
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------Aside section----------------------------------------------- */
+aside{
+    display: inline-block;
+    width: 20vw;
+    vertical-align: top;
+    margin-top: 5%;
+    
+}
+
+
+/* aside titles and select  tag */
+#queue-title{
+    margin: 5vh 5px;
+}
+
+aside h2{
+    color: white;
+    font-family: -webkit-pictograph;
+    display: inline-block;
+    margin: 0px;
+}
+
+
+/* select tag */
+aside select{
+    float: right;
+    background-color: var(--main-color,rgb(12,16,39));
+    border: none;
+    font-size: 0.8rem;
+    color: var(--light-white,white);
+    margin-top: 1vh;
+    border-style: hidden;
+}
+
+.no-outline:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+/* -----------fav -------------*/
+
+fav{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 72vh;
+    overflow: auto;
+}
+
+/* song items */
+fav songs{
+    padding: 5px;
+    min-width: 200px;
+    width: 300px;
+    
+}
+fav songs:hover{
+    border: 0.7px solid rgba(145, 143, 143, 0.5);
+    border-radius: 10px;
+    background-color:rgb(155, 86, 219);
+    padding: 10;
+}
+
+fav p{
+    color: var(--light-white,white);
+    display: inline-block;
+    
+}
+
+/* song imag/ */
+fav img{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px rgba(67, 76, 105, 0.3);
+    margin-left: 10px;
+}
+
+/* song name */
+fav songs name{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+
+/* song headings */
+fav songs name h4{
+    margin: 0px;
+    color: white;
+    font-family: -webkit-pictograph;
+    letter-spacing: 0.8px;
+}
+fav songs name h6{
+    margin: 0px;
+    color: var(--light-white);
+    font-family: -webkit-pictograph;
+    letter-spacing: 0.8px;
+}
+
+/* songs icons */
+fav songs i{
+    float: right;
+    color: var(--light-white,white);
+    vertical-align: baseline;
+    margin-top: 20px;
+}
+fav songs i:hover{
+    color: red;
+}
+
+fav::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+fav {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+.add-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------bottom navigation bar (Music controls) ------------------------------*/
+
+/* invisible initially */
+bottom-nav{
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+
+
+/* visiblity on target */
+#bottom-nav:target{
+    display: block;
+    position: absolute;
+    top: 85vh;
+    left: 15vw;
+    height: 12vh;
+    width: 70vw;
+    background-color: var(--light-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    position: fixed;
+    border:1px white solid;
+}
+
+
+bottom-nav>div>img{
+    height: 100%;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+bottom-nav>div{
+    margin: 20px;
+}
+
+/* bottom nav div */
+bottom-nav i{
+    margin: 0px 20px;
+    color: var(--light-white);
+}
+
+/* audio controls div */
+#audio-controls div{
+    height:45px;
+    width: 45px;
+    border-radius: 50%; 
+    background-color: rgb(197, 49, 49); 
+}
+
+
+#song-detail #p1{
+    color: var(--light-white);
+    margin-left: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+#song-detail #p2{
+    color: var(--light-white);
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+
+
+
+/* ----------------------------google voice animation ------------------------------------ */
+
+
+google-voice{
+    left: 35vw;
+    top: 30vh;
+    height: 20vw;
+    width: 30vw;
+    background-color: var(--light-blue);
+    position: absolute;
+    border: 2px solid var(--light-white);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 5;
+    visibility: hidden;
+    min-height: 120px;
+    min-width: 180px;
+}
+
+
+#google-voice img{
+    height: 100%;
+    width: 100%;
+}
+
+#google-voice i{
+    position: absolute;
+    top: 10;
+    left: 90%;
+}
+
+/* main logo hovering */
+#mic:hover + #google-voice{
+    visibility: visible;
+}
+
+/* visible on target */
+#google-voice:target {
+    visibility: visible;
+}
+
+
+
+
+
+
+/* ------------------------Media Query for screen width less then 1150 ------------------------------------ */
+
+
+@media only screen and (max-width:1150px){
+
+
+    /* main tag fill size */
+    main{
+        width:100vw;
+    }
+
+    /* aside full size and shifting at bottom */
+    aside{
+        margin-top: 0%;
+        display: block;
+        width: 100vw;
+        padding: 20px 60px;
+    }
+
+    #popular-items a i{
+        font-size: 2rem;
+    }
+
+    contacts{
+        margin: 0px;
+    }
+
+    fav songs{
+        padding: 20px;
+    }
+
+    /* hiding song desc at bottom navigation */
+    bottom-nav p{
+        display: none;
+    }
+
+    /* reducing padding in footer elements */
+    footer ul li{
+        font-weight: 50;
+        padding: 5px 15px;
+    }
+    #bottom-nav #vol-details{
+        display:none;
+    }
+
+    songs{
+        margin: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ------------------------Media Query for screen width less then 850 ------------------------------------ */
+
+@media only screen and (max-width:850px){
+
+    /* reducing padding of main */
+    main{
+        padding: 0px 5vw;
+    }
+    #latest-items{
+        justify-content: space-evenly;
+    }
+
+    /* hiding main animaytion */
+    #anim-div{
+        display: none;
+    }
+
+    /* showing secomndary animation */
+    #slider{
+        display: inline-block;
+    }
+
+    /* main div peroperty chnging */
+    .main-divs{
+        margin: 30px;
+        
+    }
+
+    nav .fav-sym{
+        display: inline-block;
+    }
+
+    /* hiding favourite button nav bar */
+    nav h4{
+        display: none;
+    }
+
+    /* hiding search bar */
+    .topnav .search-container {
+        display: none;
+    }
+
+    /* hiding notification icon */
+    #notification{
+        display: none;
+    }
+
+
+    /* hiding volume buttons */
+    #vol-details{
+        display: none;
+    }
+
+    /* app download banner */
+    #app-download h4{
+        font-size: 12px;
+    }
+
+    /* app banner  */
+    app{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    app i{
+        font-size: 40px;
+    }
+
+    app name h2{
+        font-size: 20px;
+    }
+
+    #popular-items a p{
+        font-size: 13px;
+    }
+
+
+
+    /* footer padding values  */
+    footer{
+        padding: 10px;
+    }
+    
+    app >img{
+        display: none;
+    }
+
+    /* footer list sizes */
+    footer ul li{
+        font-weight: 50;
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------Media Query for screen width less then 500 ------------------------------------ */
+
+@media only screen and (max-width:500px){
+
+
+    /* main divs value */
+    .main-divs{
+        margin: 10px;
+        
+    }
+    nav .fav-sym{
+        font-size: 15px;
+    }
+
+    /* image size decreasing */
+    #my-image{
+    
+        height: 8vw;
+        min-height: 40px;
+        margin-top: 10px;
+    }
+
+    /* hiding song details due to less space */
+    #song-detail{
+        display: none;
+    }
+
+
+    /* hiding footer */
+    footer{
+        display: none;
+    }
+    
+    /* reducing contact logo size */
+    contacts img {
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+        
+    }
+    
+
+    
+    /* bottom navigation size  */
+    #bottom-nav i{
+        font-size: 10px;
+        margin: 5px;
+    }
+    #bottom-nav a{
+        display: none;
+    }
+
+    /* app download banner */
+    /* #app-download h4{
+        display: none;
+    }
+     */
+    
+
+    /* menu bar shifting to left */
+    menu{
+        left: 5vh;
+    }
+}
+
+
+
+
+
+/* ------------------------Media Query for screen width less then 350 ------------------------------------ */
+
+@media only screen and (max-width:350px){
+
+
+    /* main div marging */
+    .main-divs{
+        margin: 0px;
+        
+    }
+
+
+    /* hiding image */
+    #my-image{
+        display: none;
+    }
+
+    /* hiding audio controls */
+    #audio-controls>i{
+        display: none;
+    }
+
+    #latest-items #dots-time{
+        display: none;
+    }
+
+
+    /* items names */
+    #latest-items #name{
+        display: none;
+    }
+    #latest-items songs{
+        width: 150px;
+    }
+
+    /* app banner hiding */
+    #app-download{
+        width: 50%;
+    }
+    #app-download h2{
+        font-size: 17px;
+    }
+    #app-download h4{
+        display: none;
+    }
+
+
+    /* banner size reducing */
+    app img{
+        height: 75px;
+        width: 100px;
+    }
+    app{
+        height: 100px;
+        padding: 5px;
+        min-width: 150px;
+    }
+
+    /* banner icons rduciong */
+    app i{
+        font-size: 30px;
+    }
+
+    /* mwenu bar shifted to left */
+    menu{
+        left: 0vh;
+    }
+    
+}

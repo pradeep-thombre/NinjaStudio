@@ -1,0 +1,106 @@
+
+
+/* main tag */
+main{
+    color: white;
+    width: 100vw;
+    height: auto;
+    margin-top: 10vh;
+}
+
+
+/* divs under main */
+main>div{
+    padding: 10px 20px;
+    border: 1px solid rgba(163, 159, 159,0.3);
+    border-radius: 20px;
+}
+
+
+/* colors for div childs */
+main >div:nth-child(2n+1) {
+    background-color: var(--light-blue);
+}
+
+/* about para styles */
+#about-para{
+    font-size: 20px;
+    font-family: -webkit-body;
+    text-align: justify;
+    color: var(--light-white);
+    margin: 40px 50px;
+    font-family: monospace;
+}
+
+
+/* forms */
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+
+/* childs of form */
+child{
+    margin: 20px 50px ;
+}
+
+/* input tag styles */
+child input{
+    margin: 20px 0px;
+    background-color: var(--light-white);
+    border-radius: 10px; 
+    padding: 5px 10px;
+    background-image: linear-gradient(to bottom right, rgb(91, 72, 199), rgb(222, 172, 235));
+}
+
+
+/* about us para */
+#about-para{
+    font-size: 20px;
+    font-family: -webkit-body;
+    text-align: justify;
+    color: var(--light-white);
+    margin: 40px 50px;
+    font-family: monospace;
+}
+
+
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* <!-- ----------------------------------------media tag for sceen size less than 800px---------------------------------------------- --> */
+@media only screen and (max-width:800px){
+    
+    #about-para{
+        font-size: 15px;
+        margin: 10px;
+    }
+}
+
+
+
+
+
+/* <!-- ----------------------------------------media tag for sceen size less than 800px---------------------------------------------- --> */
+@media only screen and (max-width:500px){
+    
+    #about-para{
+        font-size: 10px;
+    }
+    child input{
+        margin: 5px 0px;
+        background-color: var(--light-white);
+        border-radius: 10px; 
+        padding: 2px 5px;
+        background-image: linear-gradient(to bottom right, rgb(91, 72, 199), rgb(222, 172, 235));
+    }
+}
